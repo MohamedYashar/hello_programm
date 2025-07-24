@@ -14,5 +14,5 @@ fn get_string() -> String {
 }
 
 fn send_get_string(received_string: String) -> String {
-    return received_string; // t o own from s2 
+    return received_string; // to own from s2 // s3
 }
