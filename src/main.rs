@@ -21,14 +21,39 @@
 
 // clone method
 
-fn main() {
-    let s1 = String::from("hello"); // O T to s2
-    let len = cal_length(s1.clone());
+// fn main() {
+//     let s1 = String::from("hello"); // O T to s2
+//     let len = cal_length(s1.clone());
 
-    println!("The length of {}, {}", s1, len);
+//     println!("The length of {}, {}", s1, len);
+// }
+
+// fn cal_length(s: String) -> usize {
+//     let length: usize = s.len();
+//     return length;
+// }
+
+// Borrow operation
+
+// fn main() {
+//     let s1 = String::from("hello"); // s1 is owner
+//     let len: usize = calc_length(&s1);
+
+//     println!("The length of {} is {}", s1, len);
+// }
+
+// fn calc_length(s2: &String) -> usize {
+//     return s2.len();
+// }
+
+fn main() {
+    let arr: [&str; 3] = ["hello", "bello", "Kilo"];
+    write_arr(arr); // array directly pass as argument
+
+    println!("arr ={:?}", arr);
 }
 
-fn cal_length(s: String) -> usize {
-    let length: usize = s.len();
-    return length;
+fn write_arr(mut arr1: [&str; 3]) {
+    arr1[0] = "fellow";
+    println!("arr1 ={:?}", arr1);
 }
